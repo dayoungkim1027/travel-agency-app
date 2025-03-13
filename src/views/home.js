@@ -169,7 +169,7 @@ const SpecialOfferImage = styled.img`
 const OfferText = styled.div`
 	font-size: 1.5em;
 	margin-bottom: 2rem;
-	color: #4A4947;
+	color: #52575D;
 `
 const CompanyName = styled.h1`
 	font-size: 4em;
