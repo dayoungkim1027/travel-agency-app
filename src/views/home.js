@@ -64,6 +64,12 @@ const MenuContainer = styled.div`
 const TopMenu = styled.div`
 	display: flex;
 	flex-direction: row;
+
+	@media (max-width: 939px) {
+		flex-direction: column;
+    align-items: self-end;
+		margin-top: 1rem;
+  }
 `
 const MenuItem = styled.button`
 	background-color: unset;
