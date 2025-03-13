@@ -127,7 +127,11 @@ const SearchButton = styled.button`
 const SpecialOffers = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 0 5%;
+	margin: 4rem 10%;
+
+	@media (max-width: 939px) {
+		margin: 0 5%;
+	}
 `
 const SpecialOffersLabel = styled.h1`
 	font-weight: bolder;
