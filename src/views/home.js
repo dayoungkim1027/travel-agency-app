@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import SpecialOfferImg from '../assets/special-offer.jpg';
 import Logo from '../assets/jglogo.png';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useState } from 'react';
+import './home.css';
 
 const OuterDiv = styled.div`
 	display: flex;
@@ -63,8 +67,8 @@ const MenuContainer = styled.div`
 	@media (max-width: 939px) {
 		flex-direction: column;
 		height: unset;
-		width: 40%;
-    margin-left: 55%;
+		width: 45%;
+    margin-left: 50%;
 	}
 `
 const TopMenu = styled.div`
@@ -88,7 +92,7 @@ const MenuItem = styled.button`
 const MenuBlock = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 2rem;
+	padding: 1.3rem;;
 
 	@media (max-width: 939px) {
 		padding: 1rem;
@@ -100,23 +104,21 @@ const MenuLabel = styled.label`
 	font-size: 16px;
 	margin-bottom: .5rem;
 `
-const MenuOption = styled.label`
+const MenuOption = styled.input`
 	color: grey;
-	background-color: unset;
-	border: none;
+	padding: .5rem 1.5rem;
+	border-radius: 7px;
+	height: 100%;
 	
-	@media (max-width: 939px) {
-	}
 `
 const SearchButton = styled.button`
-	border-radius: 50px;
 	color: #B17457;
 	background-color: #EEDF7A;
 	font-weight: bolder;
 	border: none;
 	margin: 1.5rem 1rem;
 	font-size: 16px;
-	padding: 1rem 2rem;
+	padding: 0 2rem;
 	margin-left: auto;
 
 	@media (max-width: 939px) {
@@ -204,6 +206,13 @@ const FooterItem = styled.a`
 `
 
 function Home() {
+	const [startDate, setStartDate] = useState(new Date());
+	const [showDatePicker, setShowDatePicker] = useState(false);
+  
+	const onInputClick = () => {
+		setShowDatePicker(true)
+	}
+
 	return (
 		<OuterDiv>
 			<BackgroundContainer>
@@ -224,24 +233,16 @@ function Home() {
 				<CompanyName>JG TRAVELGROUP</CompanyName>
 				<MenuContainer>
 					<MenuBlock>
-						<MenuLabel>Check-in Date</MenuLabel>
-						<MenuOption>Pick date</MenuOption>
+						<MenuLabel>Check-in date</MenuLabel>
+						<DatePicker className="date-picker" selected={startDate} onChange={(date) => setStartDate(date)} />
 					</MenuBlock>
 					<MenuBlock>
-						<MenuLabel>Check-out Date</MenuLabel>
-						<MenuOption>Pick date</MenuOption>
+						<MenuLabel>Check-out date</MenuLabel>
+						<DatePicker className="date-picker" selected={startDate} onChange={(date) => setStartDate(date)} />
 					</MenuBlock>
 					<MenuBlock>
-						<MenuLabel>Destination</MenuLabel>
-						<MenuOption>Pick a destination</MenuOption>
-					</MenuBlock>
-					<MenuBlock>
-						<MenuLabel>Number of guests</MenuLabel>
-						<MenuOption>#</MenuOption>
-					</MenuBlock>
-					<MenuBlock>
-						<MenuLabel>More Filters</MenuLabel>
-						<MenuOption>Select</MenuOption>
+						<MenuLabel>Destination City</MenuLabel>
+						<MenuOption style={{ 'width': '220px'}} placeholder="Type a city..."/>
 					</MenuBlock>
 					<SearchButton>Search</SearchButton>
 				</MenuContainer>
