@@ -106,10 +106,15 @@ const MenuLabel = styled.label`
 `
 const MenuOption = styled.input`
 	color: grey;
-	padding: .5rem 1.5rem;
+	padding: .5rem 0;
+	padding-left: 1rem;
 	border-radius: 7px;
 	height: 100%;
+	width: 220px;
 	
+	@media (max-width: 939px) {
+		width: auto;
+	}
 `
 const SearchButton = styled.button`
 	color: #B17457;
@@ -242,7 +247,7 @@ function Home() {
 					</MenuBlock>
 					<MenuBlock>
 						<MenuLabel>Destination City</MenuLabel>
-						<MenuOption style={{ 'width': '220px'}} placeholder="Type a city..."/>
+						<MenuOption placeholder="Type a city..."/>
 					</MenuBlock>
 					<SearchButton>Search</SearchButton>
 				</MenuContainer>
