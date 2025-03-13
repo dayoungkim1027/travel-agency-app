@@ -27,7 +27,7 @@ const BackgroundTint = styled.div`
 const TopMenuContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: stretch;
+	justify-content: space-between;;
 	z-index: 999;
 `
 
@@ -37,6 +37,10 @@ const CompanyBanner = styled.div`
 	padding: 2rem;
 	background-color: #1E201E;
 	margin-left: 10%;
+
+	@media (max-width: 939px) {
+		margin-left: 5%;
+	}
 `
 const VacationLabel = styled.label`
 	color: white;
@@ -59,6 +63,8 @@ const MenuContainer = styled.div`
 	@media (max-width: 939px) {
 		flex-direction: column;
 		height: unset;
+		width: 40%;
+    margin-left: 55%;
 	}
 `
 const TopMenu = styled.div`
@@ -87,8 +93,6 @@ const MenuBlock = styled.div`
 	@media (max-width: 939px) {
 		padding: 1rem;
 		white-space: nowrap;
-		flex-direction: row;
-		justify-content: space-between;
 	}
 `
 const MenuLabel = styled.label`
@@ -102,7 +106,6 @@ const MenuOption = styled.label`
 	border: none;
 	
 	@media (max-width: 939px) {
-		margin-left: 1rem;
 	}
 `
 const SearchButton = styled.button`
@@ -118,13 +121,13 @@ const SearchButton = styled.button`
 
 	@media (max-width: 939px) {
 		padding: 1rem 2rem;
-		width: unset;
+		margin: 1rem;
 	}
 `
 const SpecialOffers = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 4rem 10%;
+	margin: 0 5%;
 `
 const SpecialOffersLabel = styled.h1`
 	font-weight: bolder;
