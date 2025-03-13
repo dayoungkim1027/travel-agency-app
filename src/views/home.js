@@ -212,11 +212,7 @@ const FooterItem = styled.a`
 
 function Home() {
 	const [startDate, setStartDate] = useState(new Date());
-	const [showDatePicker, setShowDatePicker] = useState(false);
-  
-	const onInputClick = () => {
-		setShowDatePicker(true)
-	}
+	const [endDate, setEndDate] = useState(new Date());
 
 	return (
 		<OuterDiv>
@@ -243,7 +239,7 @@ function Home() {
 					</MenuBlock>
 					<MenuBlock>
 						<MenuLabel>Check-out date</MenuLabel>
-						<DatePicker className="date-picker" selected={startDate} onChange={(date) => setStartDate(date)} />
+						<DatePicker className="date-picker" selected={endDate} onChange={(date) => setEndDate(date)} />
 					</MenuBlock>
 					<MenuBlock>
 						<MenuLabel>Destination City</MenuLabel>
