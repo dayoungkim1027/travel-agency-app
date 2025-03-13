@@ -55,6 +55,11 @@ const MenuContainer = styled.div`
 	width: 80%;
 	margin-left: 10%;
 	z-index: 999;
+
+	@media (max-width: 939px) {
+		flex-direction: column;
+		height: unset;
+	}
 `
 const TopMenu = styled.div`
 	display: flex;
@@ -72,6 +77,13 @@ const MenuBlock = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 2rem;
+
+	@media (max-width: 939px) {
+		padding: 1rem;
+		white-space: nowrap;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 `
 const MenuLabel = styled.label`
 	color: white;
@@ -82,6 +94,10 @@ const MenuOption = styled.label`
 	color: grey;
 	background-color: unset;
 	border: none;
+	
+	@media (max-width: 939px) {
+		margin-left: 1rem;
+	}
 `
 const SearchButton = styled.button`
 	border-radius: 50px;
@@ -91,8 +107,13 @@ const SearchButton = styled.button`
 	border: none;
 	margin: 1.5rem 1rem;
 	font-size: 16px;
-  width: 12%;
+  
 	margin-left: auto;
+
+	@media (max-width: 939px) {
+		padding: 1rem 2rem;
+		width: unset;
+	}
 `
 const SpecialOffers = styled.div`
 	display: flex;
@@ -108,12 +129,20 @@ const SpecialOffersLabel = styled.h1`
 `
 const SpecialOfferOptionContainer = styled.div`
 	display: flex;
+
+	@media (max-width: 939px) {
+		flex-wrap: wrap;
+	}
 `
 const OfferContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 30%;
   margin-right: 5%;
+
+	@media (max-width: 939px) {
+		width: 100%;
+	}
 `
 const SpecialOfferImage = styled.img`
 `
@@ -128,6 +157,10 @@ const CompanyName = styled.h1`
 	font-weight: 300;
 	text-align: center;
 	z-index: 999;
+
+	@media (max-width: 939px) {
+		font-size: 2em;
+	}
 `
 const OfferTitle = styled.h2`
   font-size: 1.6em;
@@ -140,6 +173,10 @@ const Footer = styled.div`
 	flex-direction: row;
 	background-color: black;
 	padding: 4rem 10%;
+
+	@media (max-width: 939px) {
+		justify-content: space-between;
+	}
 `
 const FooterContainer = styled.div`
 	display: flex;
