@@ -116,7 +116,7 @@ const SearchButton = styled.button`
 	border: none;
 	margin: 1.5rem 1rem;
 	font-size: 16px;
-  
+	padding: 1rem 2rem;
 	margin-left: auto;
 
 	@media (max-width: 939px) {
